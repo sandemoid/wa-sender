@@ -1,0 +1,11 @@
+app:
+  wamd_session_path: /opt/onesender/whatsapp_01.session
+database:
+  connection: mysql
+  host: 127.0.0.1
+  name: onesendermd
+  password: secret
+  port: 3306
+  user: root
+server:
+  port: 3000

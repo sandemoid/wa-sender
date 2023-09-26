@@ -1,0 +1,16 @@
+[Unit]
+Description=onesender Multi device Service
+
+Wants=network.target
+After=syslog.target network-online.target
+
+[Service]
+Type=simple
+ExecStart=/opt/onesender/onesender-x86_64 --config=/opt/onesender/config.yaml
+ExecStop=killall -w onesender-x86_64
+Restart=on-failure
+RestartSec=10
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
